@@ -150,7 +150,7 @@
 
 
     // 変数宣言
-
+    
 
     
     // ボタンの初期設定
@@ -163,8 +163,13 @@
 
     // Alarmの処理
     function alarm(){
-        
-        
+        var canvas = $("#mycanvas")[0];
+        var ctx = canvas.getContext("2d");
+        var img = new Image();
+        img.src = "ksuisbg.gif";
+        img.onload = function() {     
+            ctx.drawImage(img, 0, 0, 300, 300);
+        };
     }
     
     // ButtonAがクリックされた時の処理
@@ -176,13 +181,11 @@
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         
-        
     }
 
     // ButtonCがクリックされた時の処理
     function btnCClick(e){
         alarm();
-        
     }
     
  
