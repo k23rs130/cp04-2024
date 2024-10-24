@@ -44,6 +44,9 @@
         $('#btnD').click(function(e) {
             btnDClick(e);
         });
+        $('#btnR').click(function(e) {
+            btnRClick(e);
+        });
         init();
     });
     
@@ -171,8 +174,7 @@
         $('#btnC').prop('disabled', false);
         $('#btnK').prop('disabled', false);
         $('#btnD').prop('disabled', false);
-        
-        
+        $('#btnR').prop('disabled', false);
     }
 
     // Alarmの処理
@@ -222,7 +224,14 @@
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間： " + period);
     }
- 
+    function btnRClick(e){
+        alarm();
+        active = false;
+        period = 0;
+        $("#time").html("経過時間： 0");
+        $("#remain").html("残り時間： " + period);
+    }
+    
     // 繰り返し実行する処理
     function timer(){  
         if (active) { etime = parseInt( (new Date() - startTime)/1000 );
@@ -252,6 +261,7 @@
     <button id="btnC">Set</button>  
     <button id="btnK">カップヌードル</button>
     <button id="btnD">どん兵衛</button>
+    <button id="btnR">Reset</button>
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>

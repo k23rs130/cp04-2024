@@ -57,8 +57,14 @@
     }
 
     #btnC {
-        font-size: 10px;
+        font-size: 20px;
         position:absolute; top:380px; left:70%; width:28%; height:60px; 
+    }
+    #btnR {
+        font-size: 15px;
+        position:absolute; top:350px; left:79%; width:20%; height:30px;
+        background-color: rgb(255, 0, 0); 
+        color: rgb(229, 255, 0);
     }
     #btnK {
         font-size: 20px;
